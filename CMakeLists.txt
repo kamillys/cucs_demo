@@ -13,8 +13,10 @@ find_package(PkgConfig)
 set(PROJECT_SOURCES_PATH "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
 pkg_check_modules(CUCS REQUIRED cucs)
+link_directories(${CUCS_LIBRARY_DIRS})
+
 set(INCLUDEDIRS ${INCLUDEDIRS} ${CUCS_INCLUDE_DIRS})
-set(PROJECTLIBS ${PROJECTLIBS} ${CUCS_LIBRARIES} )
+set(PROJECTLIBS ${PROJECTLIBS} ${CUCS_LIBRARIES})
 
 #Add include directories
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
