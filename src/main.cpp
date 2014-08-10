@@ -1,1 +1,7 @@
-int main() { return 0; }
+#include <main.h>
+
+int main() {
+    cucs_entry();
+    return 0;
+}
+
