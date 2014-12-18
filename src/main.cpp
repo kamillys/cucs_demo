@@ -67,8 +67,8 @@ inline static T inc_div(T a, T b)
 }
 
 int main() {
-    //std::vector<float> spinquads = readFile("/home/kamil/Projekty/Mgr/cucs_demo/examples/spin_quadrics_compress.txt");
-    std::vector<float> spinquads = readFile("/home/kamil/Projekty/Mgr/cucs_demo/examples/spin_quadrics_knob.txt");
+    std::vector<float> spinquads = readFile("../examples/spin_quadrics_compress.txt");
+    //std::vector<float> spinquads = readFile("../examples/spin_quadrics_knob.txt");
     unsigned long long seed = 2568305073;
     cucs_set_seed(seed);
     std::vector<u_int32_t> n1, n2;
