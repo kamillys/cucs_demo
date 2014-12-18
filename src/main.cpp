@@ -67,7 +67,8 @@ inline static T inc_div(T a, T b)
 }
 
 int main() {
-    std::vector<float> spinquads = readFile("/home/kamil/Projekty/Mgr/cucs_demo/examples/spin_quadrics_compress.txt");
+    //std::vector<float> spinquads = readFile("/home/kamil/Projekty/Mgr/cucs_demo/examples/spin_quadrics_compress.txt");
+    std::vector<float> spinquads = readFile("/home/kamil/Projekty/Mgr/cucs_demo/examples/spin_quadrics_knob.txt");
     unsigned long long seed = 2568305073;
     cucs_set_seed(seed);
     std::vector<u_int32_t> n1, n2;
@@ -76,13 +77,13 @@ int main() {
     //cucs_compute_unique_spinors(spinquads, v);
     //cucs_compute_neighbours(spinquads, v, n1, n2);
 
-    //for (int i=0; i < 10; ++i)
+    for (int i=0; i < 10; ++i)
     cucs_compute_spinors_and_neighbours(spinquads, 1000000, v, n1, n2);
-    //std::cout << "Size: " << v.size() << std::endl;
-    //std::cout << "Size: " << n1.size() << " " << n2.size() << std::endl;
+    std::cout << "Size: " << v.size() << std::endl;
+    std::cout << "Size: " << n1.size() << " " << n2.size() << std::endl;
+    std::cout << "Size: " << spinquads.size()/10 << std::endl;
 
-
-    std::cerr << n1.size() << " " << n2.size() << std::endl;
+    //std::cerr << n1.size() << " " << n2.size() << std::endl;
 
     //Sort pairs
     //std::vector<std::pair<u_int32_t, u_int32_t> > nbs(n1.size());
